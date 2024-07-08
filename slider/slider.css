@@ -1,0 +1,42 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.slider-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 130px;
+}
+
+.slider-main {
+    position: absolute;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 250px;
+    flex: 0 0 auto;
+}
+
+.btn-area {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-area button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+button i {
+    font-size: 28px;
+}
+
+
