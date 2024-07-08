@@ -4,7 +4,7 @@ $(document).ready(function () {
     const slideCount = slides.length;
     const slideWidth = slides.width();
     let slideIndex = 0;
-    let intervalId; 
+    let intervalId;
 
     sliderMain.prepend(slides.clone().addClass('clone'));
     sliderMain.append(slides.clone().addClass('clone'));
@@ -24,13 +24,13 @@ $(document).ready(function () {
     }
 
     function nextSlide() {
-        clearInterval(intervalId); 
+        // clearInterval(intervalId);
         showSlides();
-        startInterval(); 
+        // startInterval();
     }
 
     function prevSlide() {
-        clearInterval(intervalId);
+        // clearInterval(intervalId);
         slideIndex--;
         sliderMain.css('transform', `translateX(${-slideIndex * slideWidth}px)`);
         sliderMain.css('transition', 'transform 0.5s ease-in-out');
@@ -42,14 +42,14 @@ $(document).ready(function () {
                 sliderMain.css('transform', `translateX(${-slideIndex * slideWidth}px)`);
             }, 500);
         }
-        startInterval();
+        // startInterval();
     }
 
-    function startInterval() {
-        intervalId = setInterval(showSlides, 3000);
-    }
+    // function startInterval() {
+    //     intervalId = setInterval(showSlides, 3000);
+    // }
 
-    startInterval();
+    // startInterval();
 
     window.nextSlide = nextSlide;
     window.prevSlide = prevSlide;
